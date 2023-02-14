@@ -1,0 +1,30 @@
+{
+  "name": "tailwind-extract",
+  "version": "1.0.0",
+  "description": "Utility package for Tailwind CSS",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ozgurgokdemir/tailwind-extract.git"
+  },
+  "keywords": [
+    "tailwind",
+    "utility",
+    "classes",
+    "classname",
+    "classnames"
+  ],
+  "author": {
+    "name": "Özgür Gökdemir",
+    "email": "ozgurgokd@gmail.com",
+    "url": "https://ozgurgokdemir.com"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ozgurgokdemir/tailwind-extract/issues"
+  },
+  "homepage": "https://github.com/ozgurgokdemir/tailwind-extract#readme"
+}
