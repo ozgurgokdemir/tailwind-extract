@@ -7,7 +7,8 @@
   "types": "dist/index.d.ts",
   "scripts": {
     "build": "tsup src/index.ts --format esm,cjs --dts",
-    "lint": "tsc"
+    "lint": "eslint src/**/*.ts --fix",
+    "format": "prettier src/**/*.ts --write"
   },
   "repository": {
     "type": "git",
@@ -31,6 +32,14 @@
   },
   "homepage": "https://github.com/ozgurgokdemir/tailwind-extract#readme",
   "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.52.0",
+    "@typescript-eslint/parser": "^5.52.0",
+    "eslint": "^8.34.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-airbnb-typescript": "^17.0.0",
+    "eslint-config-prettier": "^8.6.0",
+    "eslint-plugin-import": "^2.27.5",
+    "prettier": "^2.8.4",
     "tsup": "^6.6.3",
     "typescript": "^4.9.5"
   }
