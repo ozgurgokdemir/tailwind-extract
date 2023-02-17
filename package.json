@@ -11,7 +11,8 @@
   "scripts": {
     "build": "tsup src/index.ts --format esm,cjs --dts",
     "lint": "eslint src/**/*.ts",
-    "format": "prettier src/**/*.ts --write"
+    "format": "prettier src/**/*.ts --write",
+    "release": "pnpm run build && changeset publish"
   },
   "repository": {
     "type": "git",
