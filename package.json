@@ -1,13 +1,16 @@
 {
   "name": "tailwind-extract",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "Utility package for Tailwind CSS",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
   "types": "dist/index.d.ts",
+  "files": [
+    "/dist"
+  ],
   "scripts": {
     "build": "tsup src/index.ts --format esm,cjs --dts",
-    "lint": "eslint src/**/*.ts --fix",
+    "lint": "eslint src/**/*.ts",
     "format": "prettier src/**/*.ts --write"
   },
   "repository": {
