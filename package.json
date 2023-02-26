@@ -12,6 +12,7 @@
     "build": "tsup src/index.ts --format esm,cjs --dts",
     "lint": "eslint src/**/*.ts",
     "format": "prettier src/**/*.ts --write",
+    "test": "vitest run",
     "release": "pnpm run build && changeset publish"
   },
   "repository": {
@@ -37,6 +38,7 @@
   "homepage": "https://github.com/ozgurgokdemir/tailwind-extract#readme",
   "devDependencies": {
     "@changesets/cli": "^2.26.0",
+    "@types/node": "^18.14.1",
     "@typescript-eslint/eslint-plugin": "^5.52.0",
     "@typescript-eslint/parser": "^5.52.0",
     "eslint": "^8.34.0",
@@ -46,6 +48,7 @@
     "eslint-plugin-import": "^2.27.5",
     "prettier": "^2.8.4",
     "tsup": "^6.6.3",
-    "typescript": "^4.9.5"
+    "typescript": "^4.9.5",
+    "vitest": "^0.28.5"
   }
 }
