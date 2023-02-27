@@ -10,12 +10,17 @@ describe('ext', () => {
     expect(result).toEqual('flex items-center justify-center');
   });
 
-  it('Should remove any unnecessary whitespace and join the classnames with a single space', () => {
+  it('Should remove unnecessary whitespace at the beginning and end of the classname', () => {
     const result = ext(['  flex', '  items-center  ', 'justify-center  ']);
     expect(result).toEqual('flex items-center justify-center');
   });
 
-  it('Should remove any unnecessary whitespace', () => {
+  it('Should remove unnecessary whitespace in the middle of the classname', () => {
+    const result = ext(['flex', 'items-center   justify-center']);
+    expect(result).toEqual('flex items-center justify-center');
+  });
+
+  it('Should remove any unnecessary whitespace when input is a string', () => {
     const result = ext('  flex   items-center justify-center  ');
     expect(result).toEqual('flex items-center justify-center');
   });
@@ -26,7 +31,7 @@ describe('ext', () => {
   });
 
   it('Should return an empty string when all inputs are invalid', () => {
-    expect(ext([0, false, null, undefined])).toEqual('');
+    expect(ext([false, null, undefined, 0, {}, []])).toEqual('');
   });
 
   it('Should return an empty string when input is an empty array', () => {
