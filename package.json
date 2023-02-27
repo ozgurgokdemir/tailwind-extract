@@ -13,7 +13,8 @@
     "lint": "eslint src/**/*.ts",
     "format": "prettier src/**/*.ts --write",
     "test": "vitest run",
-    "release": "pnpm run build && changeset publish"
+    "ci": "pnpm run lint && pnpm run test && pnpm run build",
+    "release": "pnpm run ci && changeset publish"
   },
   "repository": {
     "type": "git",
